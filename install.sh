@@ -3,7 +3,7 @@
 #================================================================================
 # Warp++ (WarpPlusPlus) All-in-One Installer with LuCI UI
 #
-# Created by: PeDitX & Gemini
+# Created by: PeDitX
 # Version: 17.0 (Final - Adopted Source Logic for Maximum Stability)
 #
 # This script will:
@@ -683,5 +683,5 @@ echo "      Warp++ Installation Completed! "
 echo "================================================"
 echo -e "\nPlease refresh your router's web page."
 echo "You can find the new manager under: PeDitXOS Tools -> Warp++"
-echo -e "\nMade By: PeDitX & Gemini\n"
+echo -e "\nMade By: PeDitX\n"
 
