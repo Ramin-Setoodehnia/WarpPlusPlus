@@ -131,9 +131,9 @@ cat > /usr/lib/lua/luci/controller/warpplusplus.lua <<'EoL'
 module("luci.controller.warpplusplus", package.seeall)
 
 function index()
-    entry({"admin", "peditxos"}, nil, "PeDitXOS Tools", 55).dependent = false
-    entry({"admin", "peditxos", "warpplusplus"}, template("warpplusplus/main"), "Warp++", 1).dependent = true
-    entry({"admin", "peditxos", "warpplusplus_api"}, call("api_handler")).leaf = true
+    entry({"admin", "services"}, nil, "Services", 43).dependent = false
+    entry({"admin", "services", "warpplusplus"}, template("warpplusplus/main"), "WarpPlus+", 1).dependent = true
+    entry({"admin", "services", "warpplusplus_api"}, call("api_handler")).leaf = true
 end
 
 -- This function generates and writes the init.d script content using the stable source logic
@@ -642,7 +642,7 @@ if uci show passwall2 >/dev/null 2>&1; then
     uci -q batch <<-EOF
         delete passwall2.WarpPlusPlus
         set passwall2.WarpPlusPlus=nodes
-        set passwall2.WarpPlusPlus.remarks='Warp++'
+        set passwall2.WarpPlusPlus.remarks='WarpPlus+'
         set passwall2.WarpPlusPlus.type='Xray'
         set passwall2.WarpPlusPlus.protocol='socks'
         set passwall2.WarpPlusPlus.server='127.0.0.1'
@@ -656,7 +656,7 @@ elif uci show passwall >/dev/null 2>&1; then
     uci -q batch <<-EOF
         delete passwall.WarpPlusPlus
         set passwall.WarpPlusPlus=nodes
-        set passwall.WarpPlusPlus.remarks='Warp++'
+        set passwall.WarpPlusPlus.remarks='WarpPlus+'
         set passwall.WarpPlusPlus.type='Xray'
         set passwall.WarpPlusPlus.protocol='socks'
         set passwall.WarpPlusPlus.server='127.0.0.1'
