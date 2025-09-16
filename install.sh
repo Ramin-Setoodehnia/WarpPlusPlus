@@ -131,9 +131,9 @@ cat > /usr/lib/lua/luci/controller/warpplusplus.lua <<'EoL'
 module("luci.controller.warpplusplus", package.seeall)
 
 function index()
-    entry({"admin", "services"}, nil, "Services", 43).dependent = false
-    entry({"admin", "services", "warpplusplus"}, template("warpplusplus/main"), "WarpPlusPlus", 5).dependent = true
-    entry({"admin", "services", "warpplusplus_api"}, call("api_handler")).leaf = true
+    entry({"admin", "peditxos"}, nil, "Panel Tools", 43).dependent = false
+    entry({"admin", "peditxos", "warpplusplus"}, template("warpplusplus/main"), "WarpPlusPlus", 5).dependent = true
+    entry({"admin", "peditxos", "warpplusplus_api"}, call("api_handler")).leaf = true
 end
 
 -- This function generates and writes the init.d script content using the stable source logic
