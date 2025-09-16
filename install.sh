@@ -682,6 +682,4 @@ echo -e "\n================================================"
 echo "      Warp++ Installation Completed! "
 echo "================================================"
 echo -e "\nPlease refresh your router's web page."
-echo "You can find the new manager under: PeDitXOS Tools -> Warp++"
-echo -e "\nMade By: PeDitX\n"
 
